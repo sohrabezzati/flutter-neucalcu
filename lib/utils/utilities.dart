@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 import 'package:neucalcu/models/record.dart';
 
-String getFormattedDate({String date}) {
+String getFormattedDate({required String date}) {
   DateTime dateTime = DateTime.parse(date);
   DateFormat formatter = new DateFormat('MMMM dd, yyyy K:mm a');
   String formattedDate = formatter.format(dateTime);
@@ -12,7 +12,7 @@ String getFormattedDate({String date}) {
 }
 
 List getReversedList({box}) {
-  List<Record> list = List<Record>();
+  List<Record> list = List<Record>.empty();
   for (int i = 0; i < box.length; i++) {
     final Record record = box.get(i);
     list.add(record);
@@ -20,7 +20,8 @@ List getReversedList({box}) {
   return list.reversed.toList();
 }
 
-SystemUiOverlayStyle getSystemUI({bool appTheme, Color navBarColor}) {
+SystemUiOverlayStyle getSystemUI(
+    {required bool appTheme, required Color navBarColor}) {
   return appTheme
       ? SystemUiOverlayStyle.dark.copyWith(
           statusBarColor: Colors.transparent,
@@ -36,7 +37,7 @@ SystemUiOverlayStyle getSystemUI({bool appTheme, Color navBarColor}) {
 
 appBarStyle(BuildContext context) {
   final _textTheme = Theme.of(context).textTheme;
-  return _textTheme.subtitle1.copyWith(
-    color: _textTheme.headline1.color.withOpacity(0.55),
+  return _textTheme.subtitle1!.copyWith(
+    color: _textTheme.headline1!.color!.withOpacity(0.55),
   );
 }

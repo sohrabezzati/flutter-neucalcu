@@ -4,7 +4,7 @@ import 'package:neucalcu/ui/widgets/concave_decoration.dart';
 const double _radius = 24.0;
 const double _blurRadius = 12.0;
 
-List<BoxShadow> _shadows({@required Color light, @required Color dark}) {
+List<BoxShadow> _shadows({required Color light, required Color dark}) {
   List<BoxShadow> shadows = [
     BoxShadow(
       blurRadius: _blurRadius,
@@ -21,8 +21,7 @@ List<BoxShadow> _shadows({@required Color light, @required Color dark}) {
 }
 
 // Rounded rectangle
-ConcaveDecoration innerShadow(BuildContext context,
-    {double radius = _radius}) {
+ConcaveDecoration innerShadow(BuildContext context, {double radius = _radius}) {
   final _theme = Theme.of(context);
   return ConcaveDecoration(
     shape: RoundedRectangleBorder(

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:neucalcu/models/record.dart';
 
 class RecordText extends StatelessWidget {
-  RecordText({@required this.record});
+  RecordText({required this.record});
 
   final Record record;
 
@@ -17,8 +17,8 @@ class RecordText extends StatelessWidget {
           fit: BoxFit.fitWidth,
           child: Text(
             record.result,
-            style: _textTheme.headline5.copyWith(
-              color: _textTheme.headline1.color,
+            style: _textTheme.headline5!.copyWith(
+              color: _textTheme.headline1!.color,
             ),
           ),
         ),

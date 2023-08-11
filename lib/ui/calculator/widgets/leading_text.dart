@@ -11,8 +11,8 @@ class LeadingText extends StatefulWidget {
 
 class _LeadingTextState extends State<LeadingText>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
-  Animation _animation;
+  late AnimationController _controller;
+  late Animation<double> _animation;
 
   @override
   void initState() {
@@ -39,8 +39,8 @@ class _LeadingTextState extends State<LeadingText>
   @override
   Widget build(BuildContext context) {
     final _textTheme = Theme.of(context).textTheme;
-    Color _primaryText = _textTheme.headline1.color;
-    Color _secondaryText = _textTheme.bodyText1.color;
+    Color? _primaryText = _textTheme.headline1!.color;
+    Color? _secondaryText = _textTheme.bodyText1!.color;
 
     final _sizeTween = Tween(begin: sizeHeadline1, end: sizeSubtitle1);
     final ColorTween _colorTween =

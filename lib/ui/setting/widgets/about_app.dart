@@ -25,9 +25,12 @@ class AboutApp extends StatelessWidget {
             children: <Widget>[
               Text(
                 _appName,
-                style: _theme.subtitle1.copyWith(color: _theme.headline1.color),
+                style:
+                    _theme.subtitle1!.copyWith(color: _theme.headline1!.color),
               ),
-              Text(_appVersion, style: _theme.caption.copyWith(color: _theme.subtitle1.color)),
+              Text(_appVersion,
+                  style:
+                      _theme.caption!.copyWith(color: _theme.subtitle1!.color)),
             ],
           ),
         ],
@@ -38,7 +41,7 @@ class AboutApp extends StatelessWidget {
         children: <Widget>[
           Text(
             'NeuCalcu is a Flutter calculator application that uses Neumorphic Design',
-            style: _theme.bodyText1.copyWith(color: _theme.headline1.color),
+            style: _theme.bodyText1!.copyWith(color: _theme.headline1!.color),
           ),
           SizedBox(height: appPadding),
           ContentText(
@@ -56,7 +59,7 @@ class AboutApp extends StatelessWidget {
         ],
       ),
       actions: <Widget>[
-        FlatButton(
+        RawMaterialButton(
           onPressed: () => Navigator.pop(context),
           child: Text('Close'),
         ),
@@ -70,7 +73,10 @@ class ContentText extends StatelessWidget {
   final String trailingText;
   final String url;
 
-  ContentText({this.leadingText, this.trailingText, this.url});
+  ContentText(
+      {required this.leadingText,
+      required this.trailingText,
+      required this.url});
 
   @override
   Widget build(BuildContext context) {
@@ -80,11 +86,11 @@ class ContentText extends StatelessWidget {
         children: [
           TextSpan(
             text: leadingText,
-            style: _theme.bodyText1.copyWith(color: _theme.headline1.color),
+            style: _theme.bodyText1!.copyWith(color: _theme.headline1!.color),
           ),
           TextSpan(
             text: trailingText,
-            style: _theme.bodyText1.copyWith(color: Colors.blue),
+            style: _theme.bodyText1!.copyWith(color: Colors.blue),
             recognizer: TapGestureRecognizer()
               ..onTap = () => _launchURL(url: url),
           ),
@@ -93,7 +99,7 @@ class ContentText extends StatelessWidget {
     );
   }
 
-  _launchURL({@required String url}) async {
+  _launchURL({required String url}) async {
     if (await canLaunch(url)) {
       await launch(url);
     } else {

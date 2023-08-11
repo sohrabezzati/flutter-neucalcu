@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:line_awesome_icons/line_awesome_icons.dart';
 import 'package:neucalcu/ui/record/records_page.dart';
 import 'package:neucalcu/ui/setting/settings_page.dart';
 import 'package:neucalcu/ui/widgets/custom_icon_button.dart';
@@ -16,7 +15,7 @@ class CalculatorAppbar extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             CustomIconButton(
-              icon: LineAwesomeIcons.cog,
+              icon: Icons.percent,
               size: 25.0,
               onPressed: () => Navigator.pushNamed(
                 context,
@@ -25,7 +24,7 @@ class CalculatorAppbar extends StatelessWidget {
             ),
             Text('NeuCalcu', style: appBarStyle(context)),
             CustomIconButton(
-              icon: LineAwesomeIcons.history,
+              icon: Icons.history,
               size: 25.0,
               onPressed: () => Navigator.pushNamed(
                 context,

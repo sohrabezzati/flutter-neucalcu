@@ -41,8 +41,8 @@ class EmptyData extends StatelessWidget {
       child: Center(
         child: Text(
           'Empty Data',
-          style: _textTheme.headline3.copyWith(
-            color: _textTheme.bodyText1.color,
+          style: _textTheme.headline3!.copyWith(
+            color: _textTheme.bodyText1!.color,
           ),
         ),
       ),

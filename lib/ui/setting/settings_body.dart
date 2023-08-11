@@ -35,8 +35,8 @@ class _SettingsBodyState extends State<SettingsBody> {
           Spacer(),
           Text(
             '*Select a darker color for better effect*',
-            style: _theme.textTheme.subtitle2.copyWith(
-              color: _theme.textTheme.bodyText1.color,
+            style: _theme.textTheme.subtitle2!.copyWith(
+              color: _theme.textTheme.bodyText1!.color,
             ),
           ),
         ],
@@ -46,7 +46,6 @@ class _SettingsBodyState extends State<SettingsBody> {
 
   CircleColorPicker buildColorPicker(Color color) {
     return CircleColorPicker(
-      initialColor: color,
       thumbSize: 40.0,
       strokeWidth: 12.0,
       size: Size(255, 255),

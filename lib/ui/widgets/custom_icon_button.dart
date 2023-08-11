@@ -9,7 +9,8 @@ class CustomIconButton extends StatelessWidget {
   final double size;
   final Function onPressed;
 
-  CustomIconButton({this.icon, this.size = 20.0, @required this.onPressed});
+  CustomIconButton(
+      {required this.icon, this.size = 20.0, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ class CustomIconButton extends StatelessWidget {
               decoration: outerShadow(context, radius: 25.0),
             ),
             Center(
-              child: Icon(icon, color: _theme.accentColor, size: size),
+              child: Icon(icon, color: _theme.hintColor, size: size),
             ),
           ],
         ),

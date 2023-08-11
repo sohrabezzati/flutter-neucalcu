@@ -10,8 +10,8 @@ class CalculatorButton extends StatefulWidget {
   final double fontSize;
 
   CalculatorButton({
-    this.text,
-    this.color,
+    required this.text,
+    required this.color,
     this.fontSize = sizeSubtitle1,
   });
 
@@ -65,14 +65,13 @@ class _CalculatorButtonState extends State<CalculatorButton> {
 class NeumorphicAnimation extends StatelessWidget {
   final bool _isPressed;
 
-  NeumorphicAnimation({@required bool isPressed}) : _isPressed = isPressed;
+  NeumorphicAnimation({required bool isPressed}) : _isPressed = isPressed;
 
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
       duration: Duration(milliseconds: 100),
-      decoration:
-          _isPressed ? innerShadow(context) : outerShadow(context),
+      decoration: _isPressed ? innerShadow(context) : outerShadow(context),
     );
   }
 }

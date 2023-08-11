@@ -8,14 +8,14 @@ class ButtonContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Color _danger = AppColors.danger;
-    Color _primaryText = Theme.of(context).textTheme.headline1.color;
+    Color? _primaryText = Theme.of(context).textTheme.headline1!.color;
     final _theme = Theme.of(context);
 
     return Column(
       children: <Widget>[
         ButtonRow(
           children: [
-            CalculatorButton(text: '7', color: _primaryText),
+            CalculatorButton(text: '7', color: _primaryText!),
             CalculatorButton(text: '8', color: _primaryText),
             CalculatorButton(text: '9', color: _primaryText),
             CalculatorButton(text: 'Del', color: _danger),
@@ -29,12 +29,12 @@ class ButtonContainer extends StatelessWidget {
             CalculatorButton(text: '6', color: _primaryText),
             CalculatorButton(
               text: '×',
-              color: _theme.accentColor,
+              color: _theme.hintColor,
               fontSize: sizeHeadline4,
             ),
             CalculatorButton(
               text: '÷',
-              color: _theme.accentColor,
+              color: _theme.hintColor,
               fontSize: sizeHeadline4,
             ),
           ],
@@ -46,12 +46,12 @@ class ButtonContainer extends StatelessWidget {
             CalculatorButton(text: '3', color: _primaryText),
             CalculatorButton(
               text: '+',
-              color: _theme.accentColor,
+              color: _theme.hintColor,
               fontSize: sizeHeadline4,
             ),
             CalculatorButton(
               text: '-',
-              color: _theme.accentColor,
+              color: _theme.hintColor,
               fontSize: sizeHeadline4,
             ),
           ],
@@ -61,17 +61,17 @@ class ButtonContainer extends StatelessWidget {
             CalculatorButton(text: '0', color: _primaryText),
             CalculatorButton(
               text: '(',
-              color: _theme.accentColor,
+              color: _theme.hintColor,
               fontSize: sizeHeadline6,
             ),
             CalculatorButton(
               text: ')',
-              color: _theme.accentColor,
+              color: _theme.hintColor,
               fontSize: sizeHeadline6,
             ),
             CalculatorButton(
               text: '.',
-              color: _theme.accentColor,
+              color: _theme.hintColor,
               fontSize: sizeHeadline3,
             ),
             CalculatorButton(

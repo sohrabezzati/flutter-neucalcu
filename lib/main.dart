@@ -69,7 +69,7 @@ class MyApp extends StatelessWidget {
 
     return base.copyWith(
         primaryColor: primary,
-        accentColor: accent,
+        hintColor: accent,
         scaffoldBackgroundColor: primary,
         primaryColorLight: primaryLight,
         primaryColorDark: primaryDark,
@@ -85,17 +85,17 @@ class MyApp extends StatelessWidget {
 
     return base
         .copyWith(
-          headline1: base.headline1.copyWith(fontSize: sizeHeadline1),
-          headline2: base.headline2.copyWith(fontSize: sizeHeadline2),
-          headline3: base.headline3.copyWith(fontSize: sizeHeadline3),
-          headline4: base.headline4.copyWith(fontSize: sizeHeadline4),
-          headline5: base.headline5.copyWith(fontSize: sizeHeadline5),
-          headline6: base.headline6.copyWith(fontSize: sizeHeadline6),
-          subtitle1: base.subtitle1.copyWith(fontSize: sizeSubtitle1),
-          subtitle2: base.subtitle2.copyWith(fontSize: sizeSubtitle2),
-          bodyText1: base.bodyText1.copyWith(fontSize: sizeBody1),
-          bodyText2: base.bodyText2.copyWith(fontSize: sizeBody2),
-          caption: base.caption.copyWith(fontSize: sizeCaption),
+          headline1: base.headline1!.copyWith(fontSize: sizeHeadline1),
+          headline2: base.headline2!.copyWith(fontSize: sizeHeadline2),
+          headline3: base.headline3!.copyWith(fontSize: sizeHeadline3),
+          headline4: base.headline4!.copyWith(fontSize: sizeHeadline4),
+          headline5: base.headline5!.copyWith(fontSize: sizeHeadline5),
+          headline6: base.headline6!.copyWith(fontSize: sizeHeadline6),
+          subtitle1: base.subtitle1!.copyWith(fontSize: sizeSubtitle1),
+          subtitle2: base.subtitle2!.copyWith(fontSize: sizeSubtitle2),
+          bodyText1: base.bodyText1!.copyWith(fontSize: sizeBody1),
+          bodyText2: base.bodyText2!.copyWith(fontSize: sizeBody2),
+          caption: base.caption!.copyWith(fontSize: sizeCaption),
         )
         .apply(
           bodyColor: _isDarkMode

@@ -21,13 +21,17 @@ class Calculate with ChangeNotifier {
   String get expression => _getExpression();
 
   // Record History
-  void updateDisplayValues({String result, String expression, String date}) {
+  void updateDisplayValues(
+      {required String result,
+      required String expression,
+      required String date}) {
     _result = result;
     _expression = expression;
     notifyListeners();
   }
 
-  void startCalculator({BuildContext context, String buttonText}) {
+  void startCalculator(
+      {required BuildContext context, required String buttonText}) {
     if (buttonText == 'AC') {
       _clearInput();
     } else if (buttonText == 'Del') {

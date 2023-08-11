@@ -11,8 +11,8 @@ class TrailingText extends StatefulWidget {
 
 class _TrailingTextState extends State<TrailingText>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
-  Animation _animation;
+  late AnimationController _controller;
+  late Animation<double> _animation;
 
   @override
   void initState() {
@@ -40,8 +40,8 @@ class _TrailingTextState extends State<TrailingText>
   @override
   Widget build(BuildContext context) {
     final _textTheme = Theme.of(context).textTheme;
-    Color _primaryText = _textTheme.headline1.color;
-    Color _secondaryText = _textTheme.bodyText1.color;
+    Color? _primaryText = _textTheme.headline1!.color;
+    Color? _secondaryText = _textTheme.bodyText1!.color;
 
     final _sizeTween = Tween(begin: sizeSubtitle1, end: sizeHeadline1);
     final ColorTween _colorTween =

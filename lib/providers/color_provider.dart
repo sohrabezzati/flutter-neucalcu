@@ -6,7 +6,7 @@ const double _opacity = 1.0;
 const int _brightness = 25;
 
 class ColorProvider with ChangeNotifier {
-  Color _primary;
+  late Color _primary;
 
   final _box = Hive.box(boxColor);
 

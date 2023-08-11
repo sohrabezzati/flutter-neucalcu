@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class Animate with ChangeNotifier {
   bool showAnswer = false;
-  AnimationController leadingController;
-  AnimationController trailingController;
+  late AnimationController leadingController;
+  late AnimationController trailingController;
 
   void start() {
     if (showAnswer) {
@@ -18,15 +18,11 @@ class Animate with ChangeNotifier {
     notifyListeners();
   }
 
-  void _forward({AnimationController controller}) {
-    if (controller != null) {
-      controller.forward(from: 0.0);
-    }
+  void _forward({required AnimationController controller}) {
+    controller.forward(from: 0.0);
   }
 
-  void _reverse({AnimationController controller}) {
-    if (controller != null) {
-      controller.reverse(from: 1.0);
-    }
+  void _reverse({required AnimationController controller}) {
+    controller.reverse(from: 1.0);
   }
 }

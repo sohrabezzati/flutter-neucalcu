@@ -11,7 +11,7 @@ import 'record_text.dart';
 class RecordContainer extends StatelessWidget {
   final Record record;
 
-  RecordContainer({this.record});
+  RecordContainer({required this.record});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class RecordContainer extends StatelessWidget {
             children: <Widget>[
               Text(
                 getFormattedDate(date: record.date),
-                style: TextStyle(color: _theme.accentColor),
+                style: TextStyle(color: _theme.hintColor),
               ),
             ],
           ),
@@ -49,9 +49,9 @@ class RecordContainer extends StatelessWidget {
     Navigator.pop(context);
     context.read<Animate>().start();
     context.read<Calculate>().updateDisplayValues(
-      result: record.result,
-      expression: record.expression,
-      date: record.date,
-    );
+          result: record.result,
+          expression: record.expression,
+          date: record.date,
+        );
   }
 }

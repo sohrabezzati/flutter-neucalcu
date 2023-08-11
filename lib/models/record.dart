@@ -13,5 +13,5 @@ class Record {
   @HiveField(2)
   final String date;
 
-  Record({this.result, this.expression, this.date});
+  Record({required this.result, required this.expression, required this.date});
 }

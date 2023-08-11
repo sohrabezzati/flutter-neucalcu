@@ -12,7 +12,7 @@ class RecordListBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Record> _recordList = getReversedList(box: box);
+    List _recordList = getReversedList(box: box);
     return Expanded(
       child: ListView.separated(
         physics: BouncingScrollPhysics(),
